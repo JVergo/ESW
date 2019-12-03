@@ -10,7 +10,7 @@ int main() {
 	FILE* fp;	
 	fp = fopen("my_text_file.txt","r");
 	if (fp == NULL) {
-		printf("Could not open file");
+		printf("Could not open file"); //Can Casper add anything?
 		return 1;
 	}
 
