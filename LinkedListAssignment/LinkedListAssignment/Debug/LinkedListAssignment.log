@@ -5,8 +5,10 @@ C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\
 C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\Student.c(16,56): warning C4013: 'malloc' undefined; assuming extern returning int
 C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\Student.c(29,27): warning C4133: '=': incompatible types - from 'Student *' to 'Student *'
 C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\Student.c(32,21): warning C4133: '=': incompatible types - from 'Student *' to 'Student *'
+C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\Student.c(62,11): warning C4133: 'return': incompatible types - from 'Student *' to 'Student *'
   Teacher.c
 C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\Teacher.c(17,56): warning C4013: 'malloc' undefined; assuming extern returning int
+C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\Teacher.c(65,11): warning C4133: 'return': incompatible types - from 'Teacher *' to 'Teacher *'
   main.c
 C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(31,31): warning C4133: 'function': incompatible types - from 'Student **' to 'Student **'
 C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(31,36): warning C4047: 'function': 'char' differs in levels of indirection from 'char [2]'

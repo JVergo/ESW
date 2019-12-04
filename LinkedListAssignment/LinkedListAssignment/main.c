@@ -64,6 +64,6 @@ int main() {
 	printf("\nPrinting Courses:\n");
 	printCourses(courseNodeHead);
 
-	printf("\nSearching for a student\n");
+	//printf("\nSearching for a student\n"); //test me plz
 	return 0;
 }
