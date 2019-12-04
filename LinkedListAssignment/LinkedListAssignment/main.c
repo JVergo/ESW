@@ -1,6 +1,9 @@
 #include <stdio.h>
-#include "Student.h"
 #include <stdlib.h>
+
+#include "Student.h"
+#include "Course.h"
+#include "Teacher.h"
 
 #define MAXCHAR 1000
 int main() {
@@ -10,7 +13,7 @@ int main() {
 	FILE* fp;	
 	fp = fopen("my_text_file.txt","r");
 	if (fp == NULL) {
-		printf("Could not open file"); //Can Casper add anything?
+		printf("Could not open file"); //Can Casper add anything? Yes, he could
 		return 1;
 	}
 
@@ -19,6 +22,8 @@ int main() {
 	
 	//Linked list headers
 	Student* studentNodeHead = NULL;
+	Teacher* teacherNodeHead = NULL;
+	Course* courseNodeHead = NULL;
 
 	while (fgets(str, MAXCHAR, fp) != NULL) {
 		if (sscanf(str, "S %d %s ", &studentNumber, studentFirstName) != 0) {
@@ -28,10 +33,12 @@ int main() {
 		
 		if (sscanf(str, "T %d %s ", &teacherNumber, teacherFirstName) != 0) {
 			printf("TEACHER Teacher name: %s, teacher number: %d \n", teacherFirstName, teacherNumber);
+			addTeacher(&teacherNodeHead,"T", teacherFirstName, teacherNumber);
 		}
 
 		if (sscanf(str, "C %d %s %d", &courseNumber, courseName, &semesterNumber) != 0) {
 			printf("COURSE Course name: %s, course number: %d semester number: %d \n", courseName, courseNumber, semesterNumber);
+			addCourse(&courseNodeHead, "C", courseName, courseNumber, semesterNumber);
 		}
 
 		if (sscanf(str, "E %d %d ", &studentNumber, &courseNumber) != 0) {
@@ -44,16 +51,19 @@ int main() {
 	fclose(fp);
 
 
-	printf("Number of Students: %d", noOfStudents(studentNodeHead));
+	printf("\nNumber of Students: %d\n", noOfStudents(studentNodeHead));
+	printf("Number of Teachers: %d\n", noOfTeachers(teacherNodeHead));
+	printf("Number of Courses: %d\n", noOfCourses(courseNodeHead));
 
+	printf("\nPrinting Students:\n");
+	printStudents(studentNodeHead);
 
-	/*
-	Student* head = NULL;
+	printf("\nPrinting Teachers:\n");
+	printTeachers(teacherNodeHead);
 
-	for (int i = 0; i < 10; i++) {
-		addItem(&head, "S", i, "Dennis");
-	}
-	printf("Number of Items: %d", noOfItems(head));
-	*/
+	printf("\nPrinting Courses:\n");
+	printCourses(courseNodeHead);
+
+	printf("\nSearching for a student\n");
 	return 0;
 }

@@ -1,6 +1,6 @@
-#include "Teacher.h"
 #include <stdio.h>
 #include <stdint.h> 
+#include "Teacher.h"
 #include "myStrings.h"
 
 struct Teacher {
@@ -11,7 +11,7 @@ struct Teacher {
 };
 
 
-int addTeacher(Teacher** head, char ID, int teacherNumber, char teacherName[20])
+int addTeacher(struct Teacher** head, char ID, char teacherName[20], int teacherNumber)
 {
 	//New Node
 	struct Teacher* new_teacher = (struct Teacher*) malloc(sizeof(struct Teacher));
@@ -41,10 +41,33 @@ int noOfTeachers(struct Teacher* head) {
 
 	int counter = 0;
 	while (head != NULL) {
-		//printf("noOfItems => studentNumber: %d, first name: %s \n\n", head->studentNumber, head->firstName);
 		counter++;
 		head = head->next;
 	}
 
 	return counter;
+}
+
+void printTeachers(struct Teacher* p)
+{
+	printf("TEACHER Teacher name: %s, teacher number: %d \n", p->teacherName, p->teacherNumber);
+	if (p->next != NULL) {
+		printTeachers(p->next);
+	}
+}
+
+/*
+	Searches for a teacher by number
+	returns NULL if nothing found and prints an error message
+*/
+Teacher* findTeacher(struct Teacher* p, int teacherNumber) {
+	if (p->teacherNumber == teacherNumber) {
+		return p; //Found it
+	}
+	if (p->next != NULL) {
+		return findTeacher(p->next, teacherNumber); //Continue search
+	}
+	printf("Teacher with teacher number: %d does not exist in current database.", teacherNumber);
+	return NULL; //not found
+
 }

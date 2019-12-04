@@ -40,11 +40,31 @@ int noOfStudents(struct Student* head) {
 
 	int counter = 0;
 	while (head != NULL) {
-		//printf("noOfItems => studentNumber: %d, first name: %s \n\n", head->studentNumber, head->firstName);
 		counter++;
 		head = head->next;
 	}
-
 	return counter;
 }
 
+void printStudents(struct Student* p) {
+	printf("STUDENT Student name: %s, student number: %d \n", p->firstName, p->studentNumber);
+	if (p->next != NULL) {
+		printStudents(p->next);
+	}
+}
+
+/*
+	Searches for a student by number
+	returns NULL if nothing found and prints an error message
+*/
+Student* findStudent(struct Student* p, int studentNumber) {
+	if (p->studentNumber == studentNumber) {
+		return p; //Found it
+	}
+	if (p->next != NULL) {
+		return findStudent(p->next, studentNumber); //Continue search
+	}
+	printf("Student with student number: %d does not exist in current database.",studentNumber);
+	return NULL; //not found
+
+}
