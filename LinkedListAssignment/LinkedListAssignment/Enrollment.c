@@ -40,3 +40,8 @@ void printEnrollments(struct Enrollment* p) {
 		printEnrollments(p->next);
 	}
 }
+
+void printStudentEnrollments(struct Enrollment* p, struct Course* p2, int studentnumber)
+{
+
+}
