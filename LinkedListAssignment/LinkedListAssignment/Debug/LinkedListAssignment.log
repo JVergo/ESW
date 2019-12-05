@@ -1,41 +1,32 @@
-﻿  Course.c
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\Course.c(15,53): warning C4013: 'malloc' undefined; assuming extern returning int
-  Student.c
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\Student.c(14,1): warning C4028: formal parameter 1 different from declaration
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\Student.c(16,56): warning C4013: 'malloc' undefined; assuming extern returning int
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\Student.c(29,27): warning C4133: '=': incompatible types - from 'Student *' to 'Student *'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\Student.c(32,21): warning C4133: '=': incompatible types - from 'Student *' to 'Student *'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\Student.c(62,11): warning C4133: 'return': incompatible types - from 'Student *' to 'Student *'
-  Teacher.c
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\Teacher.c(17,56): warning C4013: 'malloc' undefined; assuming extern returning int
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\Teacher.c(65,11): warning C4133: 'return': incompatible types - from 'Teacher *' to 'Teacher *'
-  main.c
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(31,31): warning C4133: 'function': incompatible types - from 'Student **' to 'Student **'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(31,36): warning C4047: 'function': 'char' differs in levels of indirection from 'char [2]'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(31,36): warning C4024: 'addStudent': different types for formal and actual parameter 2
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(36,31): warning C4133: 'function': incompatible types - from 'Teacher **' to 'Teacher **'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(36,35): warning C4047: 'function': 'char' differs in levels of indirection from 'char [2]'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(36,35): warning C4024: 'addTeacher': different types for formal and actual parameter 2
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(41,29): warning C4133: 'function': incompatible types - from 'Course **' to 'Course **'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(41,34): warning C4047: 'function': 'char' differs in levels of indirection from 'char [2]'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(41,34): warning C4024: 'addCourse': different types for formal and actual parameter 2
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(54,67): warning C4133: 'function': incompatible types - from 'Student *' to 'Student *'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(55,65): warning C4133: 'function': incompatible types - from 'Teacher *' to 'Teacher *'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(56,62): warning C4133: 'function': incompatible types - from 'Course *' to 'Course *'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(59,31): warning C4133: 'function': incompatible types - from 'Student *' to 'Student *'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(62,31): warning C4133: 'function': incompatible types - from 'Teacher *' to 'Teacher *'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(65,29): warning C4133: 'function': incompatible types - from 'Course *' to 'Course *'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(14,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  main.c
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(33,31): warning C4133: 'function': incompatible types - from 'Student **' to 'Student **'
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(33,36): warning C4047: 'function': 'char' differs in levels of indirection from 'char [2]'
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(33,36): warning C4024: 'addStudent': different types for formal and actual parameter 2
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(38,31): warning C4133: 'function': incompatible types - from 'Teacher **' to 'Teacher **'
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(38,35): warning C4047: 'function': 'char' differs in levels of indirection from 'char [2]'
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(38,35): warning C4024: 'addTeacher': different types for formal and actual parameter 2
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(43,29): warning C4133: 'function': incompatible types - from 'Course **' to 'Course **'
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(43,34): warning C4047: 'function': 'char' differs in levels of indirection from 'char [2]'
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(43,34): warning C4024: 'addCourse': different types for formal and actual parameter 2
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(48,38): warning C4047: 'function': 'char' differs in levels of indirection from 'char [2]'
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(48,38): warning C4024: 'enrol_student': different types for formal and actual parameter 2
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(57,67): warning C4133: 'function': incompatible types - from 'Student *' to 'Student *'
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(58,65): warning C4133: 'function': incompatible types - from 'Teacher *' to 'Teacher *'
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(59,62): warning C4133: 'function': incompatible types - from 'Course *' to 'Course *'
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(62,31): warning C4133: 'function': incompatible types - from 'Student *' to 'Student *'
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(65,31): warning C4133: 'function': incompatible types - from 'Teacher *' to 'Teacher *'
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(68,29): warning C4133: 'function': incompatible types - from 'Course *' to 'Course *'
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(71,33): warning C4133: 'function': incompatible types - from 'Enrollment *' to 'Enrollment *'
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(15,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : see declaration of 'fopen'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(29,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(31,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2263): message : see declaration of 'sscanf'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(34,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(36,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2263): message : see declaration of 'sscanf'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(39,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(41,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2263): message : see declaration of 'sscanf'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(44,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(46,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2263): message : see declaration of 'sscanf'
-C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\LinkedListAssignment\main.c(47,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\LinkedListAssignment\main.c(50,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2263): message : see declaration of 'sscanf'
-  Generating Code...
-  LinkedListAssignment.vcxproj -> C:\Users\ErikV\Desktop\LinkedList\ESW\LinkedListAssignment\Debug\LinkedListAssignment.exe
+  LinkedListAssignment.vcxproj -> C:\Users\Casper\Desktop\Casper\VIA\Embedded\Assignment1\ESWProject\ESW\LinkedListAssignment\Debug\LinkedListAssignment.exe

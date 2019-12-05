@@ -4,6 +4,7 @@
 #include "Student.h"
 #include "Course.h"
 #include "Teacher.h"
+#include "Enrollment.h"
 
 #define MAXCHAR 1000
 int main() {
@@ -24,6 +25,7 @@ int main() {
 	Student* studentNodeHead = NULL;
 	Teacher* teacherNodeHead = NULL;
 	Course* courseNodeHead = NULL;
+	Enrollment* enrollNodeHead = NULL;
 
 	while (fgets(str, MAXCHAR, fp) != NULL) {
 		if (sscanf(str, "S %d %s ", &studentNumber, studentFirstName) != 0) {
@@ -43,6 +45,7 @@ int main() {
 
 		if (sscanf(str, "E %d %d ", &studentNumber, &courseNumber) != 0) {
 			printf("ENROLLMENT Student number: %d, course number: %d \n", studentNumber, courseNumber);
+			enrol_student(&enrollNodeHead, "E", studentNumber, courseNumber);
 		}
 		if (sscanf(str, "A %d %d ", &teacherNumber, &courseNumber) != 0) {
 			printf("ASSIGNMENT Teacher number: %d, course number: %d \n", teacherNumber, courseNumber);
@@ -63,6 +66,9 @@ int main() {
 
 	printf("\nPrinting Courses:\n");
 	printCourses(courseNodeHead);
+
+	printf("\nPrinting Enrollments:\n");
+	printEnrollments(enrollNodeHead);
 
 	//printf("\nSearching for a student\n"); //test me plz
 	return 0;
