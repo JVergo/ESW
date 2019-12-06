@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include "Course.h"
 #include "myStrings.h"
-
+/*
 typedef struct Course {
 	char ID;
 	char courseName[20];
 	int courseNumber;
 	int semesterNumber;
 	struct Course* next;
-}COURSE;
-
+}course;
+*/
 int addCourse(struct Course** head,char ID, char courseName[20], int courseNumber, int semesterNumber) {
 	//New Node
 	struct Course* new_course = (struct Course*) malloc(sizeof(struct Course));
@@ -54,7 +54,7 @@ void printCourses(struct Course* p){
 	Searches for a course by number
 	returns NULL if nothing found and prints an error message
 */
-struct Course* findCourse(struct Course* p, int courseNumber) {
+course* findCourse(course* p, int courseNumber) {
 	if (p->courseNumber == courseNumber) {
 		return p; //Found it
 	}

@@ -25,7 +25,7 @@ int main() {
 	//Linked list headers
 	Student* studentNodeHead = NULL;
 	Teacher* teacherNodeHead = NULL;
-	Course* courseNodeHead = NULL;
+	course* courseNodeHead = NULL;
 	Enrollment* enrollNodeHead = NULL;
 	Assignment* assignmentNodeHead = NULL;
 
@@ -51,7 +51,7 @@ int main() {
 		}
 		if (sscanf(str, "A %d %d ", &teacherNumber, &courseNumber) != 0) {
 			printf("ASSIGNMENT Teacher number: %d, course number: %d \n", teacherNumber, courseNumber);
-			assignTeacher(&assignmentNodeHead, "A", teacherNumber, courseNumber, teacherNodeHead, courseNodeHead);
+			assignTeacher(&assignmentNodeHead, "A", teacherNumber, courseNumber, teacherNodeHead, &courseNodeHead);
 		}
 	}
 	fclose(fp);
@@ -80,6 +80,10 @@ int main() {
 	findTeacherAssignment(assignmentNodeHead, 123457, 11); //Should work
 	findTeacherAssignment(assignmentNodeHead, 123456, 11); //Should show error
 
+	printf("\n\nPrinting teachers courses\n"); // 2)
+	printCoursesByTeacher(assignmentNodeHead, courseNodeHead, 123456); 
+
+	printf("\n\n");
 	//printf("\nSearching for a student\n"); //test me plz
 	return 0;
 }

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "Assignment.h"
 #include "myStrings.h" 
+#include "Course.h"
 
 struct Assignment {
 	char ID;
@@ -27,10 +28,10 @@ int assignTeacher(Assignment** head, char ID, int teacherNumber, int courseNumbe
 	}
 
 	//Check if course exists by number
-	if (findCourse(course, courseNumber) == NULL) {
+	/*if (findCourse(course, courseNumber) == NULL) {
 		printf("Course with course number: %d doesn't exist\n", courseNumber);
 		return -1;
-	}
+	}*/
 
 	//Set the data of new node
 	new_assign->ID = ID;
@@ -68,14 +69,13 @@ Assignment* findTeacherAssignment(struct Assignment* p, int teacherNumber, int c
 /*
 	Prints courses by number, name and semester that the teacher teaches
 */
-void printCoursesByTeacher(struct Assignment* assignment,struct Course* course, int teacherNumber) {
+void printCoursesByTeacher(struct Assignment* assignment,course* courses, int teacherNumber) {
 	
 	//Find
-	while (assignment->next != NULL) {
+	while (assignment != NULL) {
 		if (assignment->teacherNumber == teacherNumber) {  
-			//struct Course* c = findCourse(course,assignment->courseNumber);
-			//printf("Teacher %d is teaching course C %d %s on semester %d", teacherNumber, c->courseNumber, c->courseName, c->semesterNumber);
-			printf("Teacher %d is teaching course C %d %s on semester %d", teacherNumber, teacherNumber, "something", teacherNumber);
+			course* c = findCourse(courses,assignment->courseNumber);
+			printf("Teacher %d is teaching course C %d %s on semester %d", teacherNumber, c->courseNumber, c->courseName, c->semesterNumber);
 		}
 		else {
 		}
