@@ -83,6 +83,9 @@ int main() {
 	printf("\n\nPrinting teachers courses\n"); // 2)
 	printCoursesByTeacher(assignmentNodeHead, courseNodeHead, 123456); 
 
+	printf("\n\nPrinting teachers courses\n"); // 2)
+	printStudentEnrollments(enrollNodeHead, courseNodeHead, 123456);
+
 	printf("\n\n");
 	//printf("\nSearching for a student\n"); //test me plz
 	return 0;

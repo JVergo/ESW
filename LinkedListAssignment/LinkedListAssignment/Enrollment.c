@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdint.h> 
 #include "myStrings.h"
+#include "Course.h"
 
 
 
@@ -36,7 +37,16 @@ void printEnrollments(enrollment* p) {
 	}
 }
 
-void printStudentEnrollments(enrollment* p, struct Course* p2, int studentnumber)
+void printStudentEnrollments(enrollment* enrollment, struct Course* courses, int studentnumber)
 {
-
+	//Find
+	while (enrollment != NULL) {
+		if (enrollment->studentNumber == studentnumber) {
+			course* c = findCourse(courses, enrollment->courseNumber);
+			printf("Student %d is in course C %d %s on semester %d\n", studentnumber, c->courseNumber, c->courseName, c->semesterNumber);
+		}
+		else {
+		}
+		enrollment = enrollment->next;
+	}
 }
