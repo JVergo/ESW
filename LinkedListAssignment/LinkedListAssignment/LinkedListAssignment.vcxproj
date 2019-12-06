@@ -129,6 +129,7 @@
     <ClCompile Include="myStrings.c" />
     <ClCompile Include="Student.c" />
     <ClCompile Include="Teacher.c" />
+    <ClCompile Include="Assignment.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Course.h" />
@@ -136,6 +137,7 @@
     <ClInclude Include="myStrings.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="Teacher.h" />
+    <ClInclude Include="Assignment.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\..\Desktop\my_text_file.txt" />

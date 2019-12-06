@@ -2,13 +2,13 @@
 #include "Course.h"
 #include "myStrings.h"
 
-struct Course {
+typedef struct Course {
 	char ID;
 	char courseName[20];
 	int courseNumber;
 	int semesterNumber;
 	struct Course* next;
-};
+}COURSE;
 
 int addCourse(struct Course** head,char ID, char courseName[20], int courseNumber, int semesterNumber) {
 	//New Node
@@ -48,4 +48,20 @@ void printCourses(struct Course* p){
 	if (p->next != NULL) {
 		printCourses(p->next);
 	}
+}
+
+/*
+	Searches for a course by number
+	returns NULL if nothing found and prints an error message
+*/
+struct Course* findCourse(struct Course* p, int courseNumber) {
+	if (p->courseNumber == courseNumber) {
+		return p; //Found it
+	}
+	if (p->next != NULL) {
+		return findCourse(p->next, courseNumber); //Continue search
+	}
+	printf("Course with course number: %d does not exist in current database.", courseNumber);
+	return NULL; //not found
+
 }

@@ -5,6 +5,7 @@
 #include "Course.h"
 #include "Teacher.h"
 #include "Enrollment.h"
+#include "Assignment.h"
 
 #define MAXCHAR 1000
 int main() {
@@ -26,6 +27,7 @@ int main() {
 	Teacher* teacherNodeHead = NULL;
 	Course* courseNodeHead = NULL;
 	Enrollment* enrollNodeHead = NULL;
+	Assignment* assignmentNodeHead = NULL;
 
 	while (fgets(str, MAXCHAR, fp) != NULL) {
 		if (sscanf(str, "S %d %s ", &studentNumber, studentFirstName) != 0) {
@@ -49,10 +51,10 @@ int main() {
 		}
 		if (sscanf(str, "A %d %d ", &teacherNumber, &courseNumber) != 0) {
 			printf("ASSIGNMENT Teacher number: %d, course number: %d \n", teacherNumber, courseNumber);
+			assignTeacher(&assignmentNodeHead, "A", teacherNumber, courseNumber, teacherNodeHead, courseNodeHead);
 		}
 	}
 	fclose(fp);
-
 
 	printf("\nNumber of Students: %d\n", noOfStudents(studentNodeHead));
 	printf("Number of Teachers: %d\n", noOfTeachers(teacherNodeHead));
@@ -69,6 +71,14 @@ int main() {
 
 	printf("\nPrinting Enrollments:\n");
 	printEnrollments(enrollNodeHead);
+
+	printf("\nPrinting Assignments:\n");
+	printTeacherAssignments(assignmentNodeHead);
+
+	printf("\n");
+	findTeacherAssignment(assignmentNodeHead, 123456, 31); //Should work
+	findTeacherAssignment(assignmentNodeHead, 123457, 11); //Should work
+	findTeacherAssignment(assignmentNodeHead, 123456, 11); //Should show error
 
 	//printf("\nSearching for a student\n"); //test me plz
 	return 0;
