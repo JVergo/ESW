@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "Course.h"
 #include "myStrings.h"
+#include "Enrollment.h"
+#include "Student.h"
 
 int addCourse(course** head,char ID, char courseName[20], int courseNumber, int semesterNumber) {
 	//New Node
@@ -56,4 +58,25 @@ course* findCourse(course* p, int courseNumber) {
 	printf("Course with course number: %d does not exist in current database.", courseNumber);
 	return NULL; //not found
 
+}
+
+void printStrudensInCourse(course* course, enrollment* enrollment, student* students, int courseNumber) {
+	//Find
+	while (course != NULL) {
+		if (course->courseNumber == courseNumber) {
+			printf("Student in course %s are\n", course->courseName);
+			while (enrollment != NULL)
+			{
+				if (enrollment->courseNumber == course->courseNumber)
+				{
+					student* s = findStudent(students, enrollment->studentNumber);
+					printf("%d %s\n", s->studentNumber, s->firstName);
+				}
+				enrollment = enrollment->next;
+			}
+		}
+		else {
+		}
+		course = course->next;
+	}
 }
