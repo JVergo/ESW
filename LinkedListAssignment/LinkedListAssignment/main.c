@@ -92,6 +92,10 @@ int main() {
 	printf("\n\nList of teachers that tought student\n");
 	teachersThatToughtStudent(enrollNodeHead, courseNodeHead, assignmentNodeHead, 654321);
 
+	printf("\n\nRemoveing student 123456 : %d \n", removeStudent(&studentNodeHead, studentNodeHead, &enrollNodeHead, enrollNodeHead, 123456));
+	printStudents(studentNodeHead);
+	printEnrollments(enrollNodeHead);
+
 	printf("\n\n");
 	//printf("\nSearching for a student\n"); //test me plz
 	return 0;

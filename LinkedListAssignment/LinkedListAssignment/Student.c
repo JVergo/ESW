@@ -31,7 +31,6 @@ int addStudent(student** head, char ID, int studentNumber,char firstName[20])
 	return 0;
 }
 
-
 // Return no of items in list
 int noOfStudents(student* head) {
 
@@ -63,7 +62,6 @@ student* findStudent(student* p, int studentNumber) {
 	}
 	printf("Student with student number: %d does not exist in current database.",studentNumber);
 	return NULL; //not found
-
 }
 
 void teachersThatToughtStudent(struct Enrollment* enrollment, struct Course* courses, struct Assignment* assignment, int studentNumber) {
@@ -84,4 +82,40 @@ void teachersThatToughtStudent(struct Enrollment* enrollment, struct Course* cou
 		}
 		enrollment = enrollment->next;
 	}
+}
+
+int removeStudent(student** studentHead, student* p, struct Enrollment** enrollmentHead, struct Enrollment* e, int studentNumber) {
+	int resault = 0;
+	enrollment* enrollmentNodeHead = NULL;
+	while (e != NULL) {
+		if (e->studentNumber == studentNumber) {
+			enrollment* temp = e->next;
+			free(e);
+			e = temp;
+		}
+		else {
+			enrol_student(&enrollmentNodeHead, e->ID, e->studentNumber, e->courseNumber);
+			e = e->next;
+		}
+
+	}
+	*enrollmentHead = enrollmentNodeHead;
+
+	student* studentNodeHead = NULL;
+
+	while (p != NULL) {
+		if (p->studentNumber != studentNumber) {
+			addStudent(&studentNodeHead, p->ID, p->studentNumber, p->firstName);
+			p = p->next;
+		}
+		else {
+			student* temp = p->next;
+			free(findStudent(p, studentNumber));
+			resault = 1;
+			p = temp;
+		}
+
+	}
+	*studentHead = studentNodeHead;
+	return resault;
 }

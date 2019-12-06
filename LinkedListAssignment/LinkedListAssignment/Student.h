@@ -9,3 +9,4 @@ int noOfStudents(student* head);
 void printStudents(student* p);
 student* findStudent(student* p, int studentNumber);
 void teachersThatToughtStudent(struct Enrollment* enrollment, struct Course* courses, struct Assignment* assignment, int studentNumber);
+int removeStudent(student** head, student* p, struct Enrollment** enrollmentHead, struct Enrollment* e, int studentNumber);
