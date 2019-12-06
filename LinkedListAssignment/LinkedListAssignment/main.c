@@ -89,6 +89,9 @@ int main() {
 	printf("\n\nPrinting list of students in courses\n");
 	printStrudensInCourse(courseNodeHead, enrollNodeHead, studentNodeHead, 21);
 
+	printf("\n\nList of teachers that tought student\n");
+	teachersThatToughtStudent(enrollNodeHead, courseNodeHead, assignmentNodeHead, 654321);
+
 	printf("\n\n");
 	//printf("\nSearching for a student\n"); //test me plz
 	return 0;

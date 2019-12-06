@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <stdint.h> 
 #include "myStrings.h"
+#include "Assignment.h"
+#include "Course.h"
+#include "Enrollment.h"
 
 
 int addStudent(student** head, char ID, int studentNumber,char firstName[20])
@@ -61,4 +64,24 @@ student* findStudent(student* p, int studentNumber) {
 	printf("Student with student number: %d does not exist in current database.",studentNumber);
 	return NULL; //not found
 
+}
+
+void teachersThatToughtStudent(struct Enrollment* enrollment, struct Course* courses, struct Assignment* assignment, int studentNumber) {
+	printf("Student %d was tought by ", studentNumber);
+	//Find
+	while (enrollment != NULL) {
+		if (enrollment->studentNumber == studentNumber) {
+			
+			while (assignment != NULL)
+			{
+				if (enrollment->courseNumber == assignment->courseNumber) {
+					printf("%d in %d\n", assignment->teacherNumber, assignment->courseNumber);
+				}
+				assignment = assignment->next;
+			}
+			//course* c = findCourse(courses, enrollment->courseNumber);
+
+		}
+		enrollment = enrollment->next;
+	}
 }
