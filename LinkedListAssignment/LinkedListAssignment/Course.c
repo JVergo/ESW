@@ -1,18 +1,10 @@
 #include <stdio.h>
 #include "Course.h"
 #include "myStrings.h"
-/*
-typedef struct Course {
-	char ID;
-	char courseName[20];
-	int courseNumber;
-	int semesterNumber;
-	struct Course* next;
-}course;
-*/
-int addCourse(struct Course** head,char ID, char courseName[20], int courseNumber, int semesterNumber) {
+
+int addCourse(course** head,char ID, char courseName[20], int courseNumber, int semesterNumber) {
 	//New Node
-	struct Course* new_course = (struct Course*) malloc(sizeof(struct Course));
+	course* new_course = (course*) malloc(sizeof(course));
 
 	//Check if the memory has been succesfully allocated
 	if (new_course == NULL) {
@@ -34,7 +26,7 @@ int addCourse(struct Course** head,char ID, char courseName[20], int courseNumbe
 	return 0;
 }
 
-int noOfCourses(struct Course* head) {
+int noOfCourses(course* head) {
 	int counter = 0;
 	while (head != NULL) { 
 		counter++;
@@ -43,7 +35,7 @@ int noOfCourses(struct Course* head) {
 	return counter;
 }
 
-void printCourses(struct Course* p){
+void printCourses(course* p){
 	printf("COURSE Course name: %s, course number: %d semester number: %d \n", p->courseName, p->courseNumber, p->semesterNumber);
 	if (p->next != NULL) {
 		printCourses(p->next);

@@ -3,17 +3,12 @@
 #include <stdint.h> 
 #include "myStrings.h"
 
-struct Enrollment {
-	char ID;
-	int studentNumber;
-	int courseNumber;
-	struct Enrollment* next;
-};
 
-int enrol_student(Enrollment** head, char ID, int student_number, int course_number)
+
+int enrol_student(enrollment** head, char ID, int student_number, int course_number)
 {
 	//New Node
-	struct Enrollment* new_enroll = (struct Enrollment*) malloc(sizeof(struct Enrollment));
+	enrollment* new_enroll = (enrollment*) malloc(sizeof(enrollment));
 
 	//Check if the memory has been succesfully allocated
 	if (new_enroll == NULL) {
@@ -34,14 +29,14 @@ int enrol_student(Enrollment** head, char ID, int student_number, int course_num
 	return 0;
 }
 
-void printEnrollments(struct Enrollment* p) {
+void printEnrollments(enrollment* p) {
 	printf("ENROLLMENT Studentnumber: %d, course number: %d \n",p->studentNumber, p->courseNumber);
 	if (p->next != NULL) {
 		printEnrollments(p->next);
 	}
 }
 
-void printStudentEnrollments(struct Enrollment* p, struct Course* p2, int studentnumber)
+void printStudentEnrollments(enrollment* p, struct Course* p2, int studentnumber)
 {
 
 }

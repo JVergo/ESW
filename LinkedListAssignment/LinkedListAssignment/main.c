@@ -23,11 +23,11 @@ int main() {
 	char studentFirstName[20], teacherFirstName[20],courseName[20];
 	
 	//Linked list headers
-	Student* studentNodeHead = NULL;
-	Teacher* teacherNodeHead = NULL;
+	student* studentNodeHead = NULL;
+	teacher* teacherNodeHead = NULL;
 	course* courseNodeHead = NULL;
-	Enrollment* enrollNodeHead = NULL;
-	Assignment* assignmentNodeHead = NULL;
+	enrollment* enrollNodeHead = NULL;
+	assignment* assignmentNodeHead = NULL;
 
 	while (fgets(str, MAXCHAR, fp) != NULL) {
 		if (sscanf(str, "S %d %s ", &studentNumber, studentFirstName) != 0) {

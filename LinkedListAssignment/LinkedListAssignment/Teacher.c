@@ -3,18 +3,10 @@
 #include "Teacher.h"
 #include "myStrings.h"
 
-struct Teacher {
-	char ID;
-	int teacherNumber;
-	char teacherName[20];
-	struct Teacher* next;
-};
-
-
-int addTeacher(struct Teacher** head, char ID, char teacherName[20], int teacherNumber)
+int addTeacher(teacher** head, char ID, char teacherName[20], int teacherNumber)
 {
 	//New Node
-	struct Teacher* new_teacher = (struct Teacher*) malloc(sizeof(struct Teacher));
+	teacher* new_teacher = (teacher*) malloc(sizeof(teacher));
 
 	//Check if the memory has been succesfully allocated
 	if (new_teacher == NULL) {
@@ -37,7 +29,7 @@ int addTeacher(struct Teacher** head, char ID, char teacherName[20], int teacher
 
 
 // Return no of items in list
-int noOfTeachers(struct Teacher* head) {
+int noOfTeachers(teacher* head) {
 
 	int counter = 0;
 	while (head != NULL) {
@@ -48,7 +40,7 @@ int noOfTeachers(struct Teacher* head) {
 	return counter;
 }
 
-void printTeachers(struct Teacher* p)
+void printTeachers(teacher* p)
 {
 	printf("TEACHER Teacher name: %s, teacher number: %d \n", p->teacherName, p->teacherNumber);
 	if (p->next != NULL) {
@@ -60,7 +52,7 @@ void printTeachers(struct Teacher* p)
 	Searches for a teacher by number
 	returns NULL if nothing found and prints an error message
 */
-Teacher* findTeacher(struct Teacher* p, int teacherNumber) {
+teacher* findTeacher(teacher* p, int teacherNumber) {
 	if (p->teacherNumber == teacherNumber) {
 		return p; //Found it
 	}

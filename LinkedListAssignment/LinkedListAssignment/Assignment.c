@@ -3,17 +3,11 @@
 #include "myStrings.h" 
 #include "Course.h"
 
-struct Assignment {
-	char ID;
-	int teacherNumber;
-	int courseNumber;
-	struct Assignment* next;
-};
 
 
-int assignTeacher(Assignment** head, char ID, int teacherNumber, int courseNumber, struct Teacher* teacher, struct Course* course) {
+int assignTeacher(assignment** head, char ID, int teacherNumber, int courseNumber, struct Teacher* teacher, struct Course* course) {
 	//New Node
-	struct Assignment* new_assign = (struct Assignment*) malloc(sizeof(struct Assignment));
+	assignment* new_assign = (assignment*) malloc(sizeof(assignment));
 
 	//Check if the memory has been succesfully allocated
 	if (new_assign == NULL) {
@@ -26,12 +20,6 @@ int assignTeacher(Assignment** head, char ID, int teacherNumber, int courseNumbe
 		printf("Teacher with teacher number: %d doesn't exist\n", teacherNumber);
 		return -1;
 	}
-
-	//Check if course exists by number
-	/*if (findCourse(course, courseNumber) == NULL) {
-		printf("Course with course number: %d doesn't exist\n", courseNumber);
-		return -1;
-	}*/
 
 	//Set the data of new node
 	new_assign->ID = ID;
@@ -47,14 +35,14 @@ int assignTeacher(Assignment** head, char ID, int teacherNumber, int courseNumbe
 	return 0;
 }
 
-void printTeacherAssignments(struct Assignment* p) {
+void printTeacherAssignments(assignment* p) {
 	printf("ASSIGNMENT Teacher number: %d, course number: %d \n", p->teacherNumber, p->courseNumber);
 	if (p->next != NULL) {
 		printTeacherAssignments(p->next);
 	}
 }
 
-Assignment* findTeacherAssignment(struct Assignment* p, int teacherNumber, int courseNumber) {
+assignment* findTeacherAssignment(assignment* p, int teacherNumber, int courseNumber) {
 	if (p->teacherNumber == teacherNumber && p->courseNumber == courseNumber) {
 		printf("Teacher %d is assigned to course number: %d\n", teacherNumber, courseNumber);
 		return p; //Found it
@@ -69,7 +57,7 @@ Assignment* findTeacherAssignment(struct Assignment* p, int teacherNumber, int c
 /*
 	Prints courses by number, name and semester that the teacher teaches
 */
-void printCoursesByTeacher(struct Assignment* assignment,course* courses, int teacherNumber) {
+void printCoursesByTeacher(assignment* assignment,course* courses, int teacherNumber) {
 	
 	//Find
 	while (assignment != NULL) {

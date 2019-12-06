@@ -3,17 +3,11 @@
 #include <stdint.h> 
 #include "myStrings.h"
 
-struct Student {
-	char ID;
-	int studentNumber;
-	char firstName[20];
-	struct Student *next;
-};
 
-int addStudent(Student** head, char ID, int studentNumber,char firstName[20])
+int addStudent(student** head, char ID, int studentNumber,char firstName[20])
 {
 	//New Node
-	struct Student* new_student = (struct Student*) malloc(sizeof(struct Student));
+	student* new_student = (student*) malloc(sizeof(student));
 
 	//Check if the memory has been succesfully allocated
 	if (new_student == NULL) {
@@ -36,7 +30,7 @@ int addStudent(Student** head, char ID, int studentNumber,char firstName[20])
 
 
 // Return no of items in list
-int noOfStudents(struct Student* head) {
+int noOfStudents(student* head) {
 
 	int counter = 0;
 	while (head != NULL) {
@@ -46,7 +40,7 @@ int noOfStudents(struct Student* head) {
 	return counter;
 }
 
-void printStudents(struct Student* p) {
+void printStudents(student* p) {
 	printf("STUDENT Student name: %s, student number: %d \n", p->firstName, p->studentNumber);
 	if (p->next != NULL) {
 		printStudents(p->next);
@@ -57,7 +51,7 @@ void printStudents(struct Student* p) {
 	Searches for a student by number
 	returns NULL if nothing found and prints an error message
 */
-Student* findStudent(struct Student* p, int studentNumber) {
+student* findStudent(student* p, int studentNumber) {
 	if (p->studentNumber == studentNumber) {
 		return p; //Found it
 	}
